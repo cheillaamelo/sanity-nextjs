@@ -10,10 +10,12 @@ import { deskTool } from "sanity/desk";
 import { apiVersion, dataset, projectId } from "./sanity/env";
 import { schemaTypes } from "./sanity/schemas";
 import { myTheme } from "./theme";
+import StudioNavbar from "./components/StudioNavBar";
+import Logo from "./components/Logo";
 
 export default defineConfig({
   basePath: "/admin",
-  title: "Blog Routeasy",
+  title: "Admin Blog Routeasy",
   projectId,
   dataset,
   plugins: [
@@ -25,6 +27,12 @@ export default defineConfig({
   // Add and edit the content schema in the './sanity/schema' folder
   schema: {
     types: schemaTypes,
+  },
+  studio: {
+    components: {
+      logo: Logo,
+      navbar: StudioNavbar,
+    },
   },
   theme: myTheme,
 });
