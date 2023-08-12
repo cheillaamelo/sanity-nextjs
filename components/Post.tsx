@@ -4,13 +4,13 @@
 
 import Image from "next/image";
 import imageUrlBuilder from "@sanity/image-url";
-import { SanityDocument } from "@sanity/client";
+import { Post } from "@sanity/client";
 import { PortableText } from "@portabletext/react";
 import { client } from "@/sanity/lib/client";
 
 const builder = imageUrlBuilder(client);
 
-export default function Post({ post }: { post: SanityDocument }) {
+export default function Post({ post }: { post: Post }) {
   return (
     <main className="container mx-auto prose prose-lg p-4">
       <h1>{post.title}</h1>
