@@ -2,9 +2,9 @@
 
 "use client";
 
-import { Post } from "@/typings";
+import { Post } from "@sanity/client";
 import { useLiveQuery } from "@sanity/preview-kit";
-import Posts from "@/components/Posts";
+import Posts from "../Posts";
 import { postsQuery } from "@/sanity/lib/queries";
 
 export default function PreviewPosts({ posts = [] }: { posts: Post[] }) {

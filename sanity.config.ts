@@ -10,8 +10,8 @@ import { deskTool } from "sanity/desk";
 import { apiVersion, dataset, projectId } from "./sanity/env";
 import { schemaTypes } from "./sanity/schemas";
 import { myTheme } from "./theme";
-import StudioNavbar from "./components/StudioNavBar";
-import Logo from "./components/Logo";
+import StudioNavbar from "./components/layout/StudioNavBar";
+import Logo from "./components/layout//Logo";
 import { getDefaultDocumentNode } from "./structure";
 
 export default defineConfig({

@@ -1,4 +1,4 @@
-import "./../../../../styles/globals.css";
+import "../../../../styles/globals.css";
 import Head from "@/app/head";
 
 export default function RootLayout({

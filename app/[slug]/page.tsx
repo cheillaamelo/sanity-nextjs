@@ -1,10 +1,9 @@
 // ./nextjs-app/app/[slug]/page.tsx
 
-import { SanityDocument } from "@sanity/client";
 import { draftMode } from "next/headers";
-import Poste from "@/components/Post";
-import PreviewProvider from "@/components/PreviewProvider";
-import PreviewPost from "@/components/PreviewPost";
+import Poste from "../../components/layout/Post";
+import PreviewProvider from "../../components/layout/PreviewProvider";
+import PreviewPost from "../../components/layout/PreviewPost";
 import { cachedClient } from "@/sanity/lib/client";
 import { postPathsQuery, postQuery } from "@/sanity/lib/queries";
 import { getCachedClient } from "@/sanity/lib/getClient";

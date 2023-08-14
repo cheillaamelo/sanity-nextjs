@@ -1,7 +1,6 @@
-import Header from "@/components/Header";
-import "./../../styles/globals.css";
-import Head from "@/app/head";
-import Banner from "@/components/Banner";
+import { Header } from "../../components/layout/Header";
+import "../../styles/globals.css";
+import Banner from "../../components/layout/Banner";
 
 export default function RootLayout({
   children,
@@ -9,10 +8,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <body>
         <Header />
-        <Banner />
         {children}
       </body>
     </html>

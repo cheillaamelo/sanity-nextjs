@@ -1,9 +1,9 @@
 // ./nextjs-app/app/_components/Posts.tsx
 "use client";
 
-import ClientSideRoute from "./ClientSideRoute";
+import ClientSideRoute from "../ClientSideRoute";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import { Post } from "@/typings";
+import { Post } from "@sanity/client";
 import Image from "next/image";
 import urlFor from "@/sanity/lib/urlFor";
 
