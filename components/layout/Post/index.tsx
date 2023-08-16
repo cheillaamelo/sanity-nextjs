@@ -7,23 +7,28 @@ import imageUrlBuilder from "@sanity/image-url";
 import { Post } from "@sanity/client";
 import { PortableText } from "@portabletext/react";
 import { client } from "@/sanity/lib/client";
+import { Section } from "@/components/elements/Section";
+import { Title } from "@/components/elements/Texts";
 
 const builder = imageUrlBuilder(client);
 
 export default function Post({ post }: { post: Post }) {
   return (
-    <main className="container mx-auto prose prose-lg p-4">
-      <h1>{post.title}</h1>
-      {post?.mainImage ? (
-        <Image
-          className="float-left m-0 w-1/3 mr-4 rounded-lg"
-          src={builder.image(post.mainImage).width(300).height(300).url()}
-          width={300}
-          height={300}
-          alt={post?.mainImage?.alt}
-        />
-      ) : null}
-      {post?.body ? <PortableText value={post.body} /> : null}
-    </main>
+    <Section className="pt-40">
+      <Title className="mb-8 text-center font-bold py-5 text-2xl">
+        {post.title}
+      </Title>
+      <div className="relative">
+        {post?.mainImage ? (
+          <Image
+            className="object-contain relative"
+            src={builder.image(post.mainImage).url()}
+            fill
+            alt={post?.mainImage?.alt}
+          />
+        ) : null}
+        {post?.body ? <PortableText value={post.body} /> : null}
+      </div>
+    </Section>
   );
 }

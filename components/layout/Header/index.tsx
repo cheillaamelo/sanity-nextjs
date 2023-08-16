@@ -36,7 +36,7 @@ export const Header = () => {
       asTag="header"
       className={`fixed w-full h-[96px] lg:h-[88px] flex items-center z-50 transition-all bg-[#141416] ${
         (scrollTopDistance > 150 || isOpenMobileMenu) &&
-        "bg-grayscale-700 backdrop-blur-lg bg-opacity-60"
+        "bg-[#0D0E18] backdrop-blur-lg bg-opacity-60"
       }`}
     >
       <div className="md:pt-4 lg:pt-0 flex items-end lg:items-center justify-between">

@@ -1,5 +1,4 @@
 const routes = (pathname: string) => [
-  { label: "BLOG", href: "/" },
   { label: "Routing Academy", href: "/" },
   { label: "Cases", href: "/" },
   { label: "Materiais Gratuitos", href: "/" },

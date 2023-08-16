@@ -44,7 +44,7 @@ export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
           isOpen ? "w-full opacity-100" : "w-0 opacity-0"
         }`}
       >
-        <div className="border-t-2 border-primary bg-grayscale-700 flex flex-col justify-between h-full w-full pt-16 px-6 pb-8">
+        <div className="border-t-2 border-primary bg-[#0D0E18] flex flex-col justify-between h-full w-full pt-16 px-6 pb-8">
           <div>
             {routes(`${pathname}`).map((route, index) =>
               route.href ? (

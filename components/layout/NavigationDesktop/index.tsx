@@ -19,7 +19,7 @@ export const NavigationDesktop = () => {
   };
 
   return (
-    <nav className="flex items-center text-[15px] font-medium ml-16">
+    <nav className="flex items-center text-[15px] font-medium ml-16 text-white">
       {routes(`${pathname}`).map((route, index) =>
         route.href ? (
           <Link

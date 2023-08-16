@@ -50,7 +50,7 @@ export const LinkDropDown = ({ label, sub_items, isActive, isLast }: Props) => {
         </span>
       </button>
       <div
-        className={`overflow-hidden z-20 transition-all absolute -bottom-2 left-0 translate-y-full rounded-lg opacity-100 bg-grayscale-500 ${
+        className={`overflow-hidden z-20 transition-all absolute -bottom-2 left-0 translate-y-full rounded-lg opacity-100 bg-[#282A48] ${
           !isOpenDropDown && "h-0 opacity-0"
         }`}
       >
@@ -59,7 +59,7 @@ export const LinkDropDown = ({ label, sub_items, isActive, isLast }: Props) => {
             <LinkExternal
               href={sub_item.href}
               key={sub_item.label}
-              className="block whitespace-nowrap pl-5 py-2 hover:pl-6 transition-all w-40 hover:bg-grayscale-400"
+              className="block whitespace-nowrap pl-5 py-2 hover:pl-6 transition-all w-40 hover:bg-[#353860]"
             >
               {sub_item.label}
             </LinkExternal>
@@ -67,7 +67,7 @@ export const LinkDropDown = ({ label, sub_items, isActive, isLast }: Props) => {
             <Link
               key={sub_item.label}
               href={sub_item.href}
-              className="block whitespace-nowrap pl-5 py-2 hover:pl-6 transition-all w-40 hover:bg-grayscale-400"
+              className="block whitespace-nowrap pl-5 py-2 hover:pl-6 transition-all w-40 hover:bg-[#353860]"
             >
               {sub_item.label}
             </Link>
