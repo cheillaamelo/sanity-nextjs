@@ -18,17 +18,17 @@ export default function Post({ post }: { post: Post }) {
       <Title className="mb-8 text-center font-bold py-5 text-2xl">
         {post.title}
       </Title>
-      <div className="relative">
+      <div className="relative w-full drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out rounded-2xl h-80">
         {post?.mainImage ? (
           <Image
-            className="object-contain relative"
+            className="object-cover object-left lg:object-center rounded-2xl"
             src={builder.image(post.mainImage).url()}
             fill
             alt={post?.mainImage?.alt}
           />
         ) : null}
-        {post?.body ? <PortableText value={post.body} /> : null}
       </div>
+      {post?.body ? <PortableText value={post.body} /> : null}
     </Section>
   );
 }

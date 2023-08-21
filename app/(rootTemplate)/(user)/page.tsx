@@ -3,9 +3,9 @@
 import { draftMode } from "next/headers";
 import { getCachedClient } from "@/sanity/lib/getClient";
 import { postsQuery } from "@/sanity/lib/queries";
-import Posts from "../../components/layout/Posts";
-import PreviewPosts from "../../components/layout/PreviewPosts";
-import PreviewProvider from "../../components/layout/PreviewProvider";
+import Posts from "../../../components/layout/Posts";
+import PreviewPosts from "../../../components/layout/PreviewPosts";
+import PreviewProvider from "../../../components/layout/PreviewProvider";
 
 export default async function Home() {
   const preview = draftMode().isEnabled

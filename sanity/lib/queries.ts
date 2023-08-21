@@ -26,3 +26,19 @@ export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]
 export const slugQuery = groq`*[_type == "post"]{ 
   slug
 }`;
+
+export const queryCategory = groq`*[_type == 'category']{
+  title,  
+}`;
+
+export const queryCategories = groq`*[_type == "post" && queryCategory in categories[]->.title] | order(_createdAt desc){slug}`;
+
+export const queryPage = groq`*[_type == "page" && name == "Teste Página"] {
+  _id,
+  _createdAt,
+  name,
+  "slug": slug.current,
+  "image": image.asset->url,
+  url,
+  content
+}`;

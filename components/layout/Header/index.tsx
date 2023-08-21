@@ -1,5 +1,6 @@
 "use client";
 
+import "../../../styles/globals.css";
 import { Section } from "../../../components/elements/Section";
 import Image from "next/image";
 import Link from "next/link";
