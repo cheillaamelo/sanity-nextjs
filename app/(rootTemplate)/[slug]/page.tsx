@@ -7,7 +7,7 @@ import PreviewPost from "../../../components/layout/PreviewPost";
 import { cachedClient } from "@/sanity/lib/client";
 import { postPathsQuery, postQuery } from "@/sanity/lib/queries";
 import { getCachedClient } from "@/sanity/lib/getClient";
-import { Post } from "@sanity/client";
+import { Post } from "@/typings";
 
 // Prepare Next.js to know which routes already exist
 export async function generateStaticParams() {

@@ -2,7 +2,7 @@
 
 "use client";
 
-import { Post } from "@sanity/client";
+import { Post } from "@/typings";
 import { useLiveQuery } from "@sanity/preview-kit";
 import Posts from "../Posts";
 import { postsQuery } from "@/sanity/lib/queries";

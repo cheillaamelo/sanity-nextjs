@@ -4,7 +4,7 @@
 
 import Image from "next/image";
 import imageUrlBuilder from "@sanity/image-url";
-import { Post } from "@sanity/client";
+import { Post } from "@/typings";
 import { PortableText } from "@portabletext/react";
 import { client } from "@/sanity/lib/client";
 import { Section } from "@/components/elements/Section";

@@ -25,7 +25,7 @@ export const NavigationMobile = ({ isOpen, setIsOpen }: Props) => {
 
   useEffect(() => {
     setIsOpen(false);
-  }, [pathname]);
+  }, [pathname, setIsOpen]);
 
   const handleDropDown = (value: string) => {
     setDropDownIsOpen(() => (dropDownIsOpen === value ? "" : value));

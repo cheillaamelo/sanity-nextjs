@@ -59,6 +59,7 @@ interface Span {
 interface Category extends Base {
   description: string;
   title: string;
+  slug: Slug;
 }
 
 interface mainImage {
@@ -69,4 +70,11 @@ interface mainImage {
 interface Title {
   _type: "string";
   current: string;
+}
+
+interface Page extends Base {
+  title: string;
+  slug: string;
+  image: Image;
+  content: Block[];
 }

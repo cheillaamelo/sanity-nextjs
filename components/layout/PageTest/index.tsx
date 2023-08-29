@@ -16,7 +16,7 @@ export default async function PageTest() {
       <h1 className="uppercase text-red-600">projeto página</h1>
       {pages.map((page) => (
         <div key={page._id} className="block">
-          <div>Título: {page.name}</div>
+          <div>Título: {page.title}</div>
           <div>Slug: {page.slug}</div>
           <div className="relative w-full drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out rounded-2xl h-80">
             <Image

@@ -3,7 +3,7 @@
 
 import ClientSideRoute from "../ClientSideRoute";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import { Post } from "@sanity/client";
+import { Post } from "@/typings";
 import Image from "next/image";
 import urlFor from "@/sanity/lib/urlFor";
 import { PortableText } from "@portabletext/react";
@@ -22,7 +22,7 @@ export default function Posts({ posts = [] }: { posts: Post[] }) {
             <>
               <div className="block">
                 {/* <ClientSideRoute route={`/post/${post.slug.current}`}> */}
-                <ClientSideRoute route={`${post.slug.current}`}>
+                <ClientSideRoute route={`/${post.slug.current}`}>
                   <div
                     key={post._id}
                     className="flex flex-col group cursor-pointer"
@@ -37,12 +37,16 @@ export default function Posts({ posts = [] }: { posts: Post[] }) {
                       <div className="absolute bottom-0 w-full rounded-b-2xl drop-shadow-lg text-white p-5 flex justify-between">
                         <div>
                           <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center mb-2">
-                            {post.categories.map((category) => (
-                              // eslint-disable-next-line react/jsx-key
-                              <div className="bg-[#3CBC8D] text-center text-black px-3 py-1 rounded-[4px] text-sm font-semibold">
-                                <p>{category.title}</p>
-                              </div>
-                            ))}
+                            {!post.categories
+                              ? null
+                              : post.categories.map((category) => (
+                                  <div
+                                    key={category._id}
+                                    className="bg-[#3CBC8D] text-center text-black px-3 py-1 rounded-[4px] text-sm font-semibold"
+                                  >
+                                    <p>{category.title}</p>
+                                  </div>
+                                ))}
                           </div>
                           <p className="font-bold mb-2">{post.title}</p>
                           <div className="flex items-center justify-between space-x-2">

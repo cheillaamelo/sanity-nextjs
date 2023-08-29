@@ -3,7 +3,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import type { Post } from "@sanity/client";
+import type { Post } from "@/typings";
 import { useLiveQuery } from "@sanity/preview-kit";
 import { postQuery } from "@/sanity/lib/queries";
 import Poste from "../Post";
