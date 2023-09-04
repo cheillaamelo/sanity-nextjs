@@ -7,10 +7,10 @@ const routes = (pathname: string) => [
     sub_items: [
       {
         label: "Cultura",
-        href: "/",
+        href: "/categoria/cultura",
       },
-      { label: "Operações", href: "/" },
-      { label: "Tecnologia", href: "/" },
+      { label: "Operações", href: "/categoria/operacoes" },
+      { label: "Tecnologia", href: "/categoria/tecnologia" },
     ],
     isActive: pathname?.startsWith("/solucoes"),
   },

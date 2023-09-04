@@ -4,6 +4,12 @@ export default defineType({
   name: "page",
   title: "Page",
   type: "document",
+  groups: [
+    {
+      name: "seo",
+      title: "SEO",
+    },
+  ],
   fields: [
     defineField({
       name: "title",

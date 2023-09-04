@@ -1,5 +1,9 @@
 import Iframe from "sanity-plugin-iframe-pane";
+import { SEOPane } from "sanity-plugin-seo-pane";
 import type { DefaultDocumentNodeResolver } from "sanity/desk";
+import resolveProductionUrl from "./resolveProductionUrl";
+import { SanityDocument } from "next-sanity";
+import { Post } from "./typings";
 
 export const getDefaultDocumentNode: DefaultDocumentNodeResolver = (
   S,
@@ -27,7 +31,21 @@ export const getDefaultDocumentNode: DefaultDocumentNodeResolver = (
           // Consulte // Consulte https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
           attibutes: {},
         })
-        .title("Visualizar Cheila"),
+        .title("Visualizar"),
+      S.view
+        .component(SEOPane)
+        .options({
+          url: `${
+            process.env.NEXT_PUBLIC_VERCEL_URL ||
+            "http://localhost:3000/logistica-verde-saiba-como-reduzir-impactos-ambientais-da-sua-operacao/"
+          }`,
+          select: (doc: Post) => ({
+            focus_keyword: doc.keywords ?? "",
+            seo_title: doc.seoTitle ?? "",
+            meta_description: doc.description ?? "",
+          }),
+        })
+        .title("SEO"),
     ]);
   }
 };

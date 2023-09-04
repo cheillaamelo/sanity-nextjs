@@ -16,6 +16,8 @@ interface Post extends Base {
   slug: Slug;
   title: string;
   description: string;
+  keywords: string;
+  seoTitle: string;
 }
 
 interface Author extends Base {

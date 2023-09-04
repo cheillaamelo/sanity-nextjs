@@ -4,18 +4,19 @@ export default defineType({
   name: "post",
   title: "Post",
   type: "document",
+  groups: [
+    {
+      name: "seo",
+      title: "SEO",
+    },
+  ],
   fields: [
     defineField({
       name: "title",
       title: "Title",
       type: "string",
     }),
-    defineField({
-      name: "description",
-      description: "Digite um pequeno trecho para a postagem...",
-      title: "Description",
-      type: "string",
-    }),
+
     defineField({
       name: "slug",
       title: "Slug",
@@ -61,6 +62,31 @@ export default defineType({
       name: "body",
       title: "Body",
       type: "blockContent",
+    }),
+    defineField({
+      group: "seo",
+      name: "seoTitle",
+      title: "SEO title",
+      type: "string",
+    }),
+    defineField({
+      name: "seoKeywords",
+      title: "Keywords",
+      type: "string",
+      group: "seo",
+    }),
+    defineField({
+      group: "seo",
+      name: "seoSlug",
+      title: "SEO slug",
+      type: "slug",
+    }),
+    defineField({
+      group: "seo",
+      name: "description",
+      description: "Digite um pequeno trecho para a postagem...",
+      title: "SEO description",
+      type: "string",
     }),
   ],
 

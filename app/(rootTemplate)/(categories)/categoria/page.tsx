@@ -10,7 +10,7 @@ export default async function AllCategoriesPage() {
         {categories.map((category) => (
           <>
             <div>
-              <ClientSideRoute route={`/categorias/${category._id}`}>
+              <ClientSideRoute route={`/categoria/${category._id}`}>
                 <p>{category.title}</p>
               </ClientSideRoute>
             </div>
